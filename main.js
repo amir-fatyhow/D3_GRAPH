@@ -61,20 +61,35 @@ window.onload = function () {
                     new HyperboloidSettings(ellipse, graph_3D);
                     break;
                 case "ellipticalParaboloid":
-                    let ellipticalParaboloid = new EllipticalParaboloid(10, 9, 7, 20);
+                    let ellipticalParaboloid = new EllipticalParaboloid();
                     ellipticalParaboloid.depthEdges = 0.8;
                     graph_3D.removeAllFiguresFromScene();
                     graph_3D.getSceneFigures().push(ellipticalParaboloid);
                     graph_3D.renderScene();
                     new HyperboloidSettings(ellipticalParaboloid, graph_3D);
                     break;
+                case "hyperbolicParaboloid":
+                    let hyperbolicParaboloid = new HyperbolicParaboloid();
+                    hyperbolicParaboloid.depthEdges = 0.8;
+                    graph_3D.removeAllFiguresFromScene();
+                    graph_3D.getSceneFigures().push(hyperbolicParaboloid);
+                    graph_3D.renderScene();
+                    break;
                 case "parabolicCylinder":
-                    let parabolicCylinder = new ParabolicCylinder(10, 9, 7, 20);
+                    let parabolicCylinder = new ParabolicCylinder();
                     parabolicCylinder.depthEdges = 0.8;
                     graph_3D.removeAllFiguresFromScene();
                     graph_3D.getSceneFigures().push(parabolicCylinder);
                     graph_3D.renderScene();
                     new HyperboloidSettings(parabolicCylinder, graph_3D);
+                    break;
+                case "hyperbolicCylinder":
+                    let hyperbolicCylinder = new HyperbolicCylinder();
+                    hyperbolicCylinder.depthEdges = 0.8;
+                    graph_3D.removeAllFiguresFromScene();
+                    graph_3D.getSceneFigures().push(hyperbolicCylinder);
+                    graph_3D.renderScene();
+                    new HyperbolicCylinderSettings(hyperbolicCylinder, graph_3D);
                     break;
                 case "single-surface-hyperboloid":
                     let singleSurfaceHyperboloid = new SingleSurfaceHyperboloid(10, 7, 7, 20);
@@ -96,6 +111,13 @@ window.onload = function () {
                     graph_3D.getSceneFigures().push(sphere);
                     graph_3D.renderScene();
                     new SphereSettings(sphere, graph_3D);
+                    break;
+                case "ellipticalCylinder":
+                    let ellipticalCylinder = new EllipticalCylinder(10, 10);
+                    graph_3D.removeAllFiguresFromScene();
+                    graph_3D.getSceneFigures().push(ellipticalCylinder);
+                    graph_3D.renderScene();
+                    new EllipticalCylinderSettings(ellipticalCylinder, graph_3D);
                     break;
                 case "sunSystem":
                     let sun = new Sphere(8, 20);

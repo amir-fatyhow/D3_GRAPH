@@ -1,4 +1,4 @@
-class HyperboloidSettings extends Settings {
+class EllipticalCylinderSettings extends Settings {
     constructor(figure, graph_3D) {
         let settings = document.querySelector('.settings');
         settings.innerHTML = '';
